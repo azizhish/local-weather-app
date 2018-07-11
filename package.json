@@ -26,6 +26,11 @@
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
+  "config": {
+    "imageRepo": "shamwise/weather-app",
+    "imageName": "custom_app_name",
+    "imagePort": "0000"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.1",
     "@angular/cli": "~6.0.1",
