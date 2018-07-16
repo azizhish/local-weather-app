@@ -1,7 +1,7 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
 <mat-toolbar color="primary">
   <span>Better Weather</span>
@@ -9,6 +9,9 @@ import { Component } from '@angular/core'
 <div fxLayoutAlign="center">
   <div class="mat-caption">Your city, your forecast, right now!</div>
 </div>
+  <div fxLayoutAlign="center">
+    <app-city-search></app-city-search>
+  </div>
 <div fxLayout="row">
   <div fxFlex></div>
   <div fxFlex="300px">
@@ -25,6 +28,6 @@ import { Component } from '@angular/core'
   </div>
   <div fxFlex></div>
 </div>
-  `,
+  `
 })
 export class AppComponent {}
