@@ -9,10 +9,18 @@ import { WeatherService } from '../weather/weather.service'
 })
 export class CurrentWeatherComponent implements OnInit {
   @Input() current: ICurrentWeather
+  show: boolean
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit() {
-    this.weatherService.currentWeather.subscribe(data => (this.current = data))
+    this.weatherService.currentWeather.subscribe(data => {
+      this.current = data
+      if (this.current.city === '') {
+        this.show = false
+      } else {
+        this.show = true
+      }
+    })
   }
 
   getOrdinal(n: number): string {
