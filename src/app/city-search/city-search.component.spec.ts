@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { MaterialModule } from '../material.module'
 import { CitySearchComponent } from './city-search.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 describe('CitySearchComponent', () => {
   let component: CitySearchComponent
@@ -9,7 +12,13 @@ describe('CitySearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CitySearchComponent],
-      imports: [MaterialModule],
+      imports: [
+        HttpClientTestingModule,
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+      ],
     }).compileComponents()
   }))
 

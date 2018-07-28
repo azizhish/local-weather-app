@@ -2,13 +2,13 @@ import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { inject, TestBed } from '@angular/core/testing'
 import { WeatherService } from './weather.service'
 import { WeatherServiceFake } from './weather.service.fake'
+import { MaterialModule } from '../material.module'
 
 describe('WeatherService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, MaterialModule],
       providers: [{ provide: WeatherService, useClass: WeatherServiceFake }],
-      imports: [MaterialModule],
     })
   })
 
