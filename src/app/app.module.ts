@@ -17,18 +17,12 @@ import { MaterialModule } from './/material.module'
 import { AppComponent } from './app.component'
 import { CitySearchComponent } from './city-search/city-search.component'
 import { CurrentWeatherComponent } from './current-weather/current-weather.component'
-import { SideNavComponent } from './side-nav/side-nav.component'
 // Services imports
 import { WeatherService } from './weather/weather.service'
 import { WeatherServiceFake } from './weather/weather.service.fake'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CurrentWeatherComponent,
-    SideNavComponent,
-    CitySearchComponent,
-  ],
+  declarations: [AppComponent, CurrentWeatherComponent, CitySearchComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
